@@ -1,7 +1,22 @@
+requirejs.config({
+  paths: {
+    'jstat': 'lib/jstat.js'
+  },
+  shim: {
+    jstat: {
+      exports: ['j$', 'jStat'],
+      init: function () {
+        return {
+          j$: j$,
+          jStat: jStat
+        };
+      }
+    }
+  }
+})
+
 var categories = [
   require('./lib/compatibility'),
-  require('./lib/database'),
-  require('./lib/engineering'),
   require('./lib/logical'),
   require('./lib/math-trig'),
   require('./lib/text'),
