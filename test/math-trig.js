@@ -37,36 +37,6 @@ suite('Math & Trig', function() {
     mathTrig.ADD(1, 'string').should.equal(error.value);
   });
 
-
-  //TODO: more edge cases, explore the second argument (options)
-  test('AGGREGATE', function() {
-    mathTrig.AGGREGATE(1, 4, [1, 2, 3]).should.equal(2);
-    mathTrig.AGGREGATE(2, 4, [1, 2, 3, 'does not count']).should.equal(3);
-    mathTrig.AGGREGATE(3, 4, [1, 2, 3, 'counts']).should.equal(4);
-    mathTrig.AGGREGATE(4, 4, [1, 2, 3]).should.equal(3);
-    mathTrig.AGGREGATE(5, 4, [1, 2, 3]).should.equal(1);
-    mathTrig.AGGREGATE(6, 4, [1, 2, 3]).should.equal(6);
-    mathTrig.AGGREGATE(7, 4, [1, 2, 3]).should.equal(1);
-    mathTrig.AGGREGATE(8, 4, [1, 2, 3]).should.approximately(0.816496580927726, 1e-9);
-    mathTrig.AGGREGATE(9, 4, [1, 2, 3]).should.equal(6);
-    mathTrig.AGGREGATE(10, 4, [1, 2, 3]).should.equal(1);
-    mathTrig.AGGREGATE(11, 4, [1, 2, 3]).should.approximately(0.6666666666666666, 1e-9);
-    mathTrig.AGGREGATE(12, 4, [1, 2, 3]).should.equal(2);
-    mathTrig.AGGREGATE(13, 4, [1, 2, 3]).should.equal(1);
-    mathTrig.AGGREGATE(14, 4, [1, 2, 3], 2).should.equal(2);
-    mathTrig.AGGREGATE(15, 4, [1, 2, 3], 2).should.equal(2);
-    mathTrig.AGGREGATE(16, 4, [1, 2, 3], 0.4).should.approximately(1.8, 1e-9);
-    mathTrig.AGGREGATE(17, 4, [1, 2, 3], 2).should.equal(2);
-    mathTrig.AGGREGATE(18, 4, [1, 2, 3], 0.4).should.approximately(1.6, 1e-9);
-    mathTrig.AGGREGATE(19, 4, [1, 2, 3], 2).should.equal(2);
-    mathTrig.AGGREGATE('invalid', 4, [1, 2, 3], 2).should.equal(error.value);
-  });
-
-  test('ARABIC', function() {
-    mathTrig.ARABIC('X').should.equal(10);
-    mathTrig.ARABIC('ABC').should.equal(error.value);
-  });
-
   test('ASIN', function() {
     mathTrig.ASIN(0.5).should.approximately(0.5235987755982989, 1e-9);
     mathTrig.ASIN('invalid').should.equal(error.value);
@@ -625,32 +595,6 @@ suite('Math & Trig', function() {
   test('SQRTPI', function() {
     mathTrig.SQRTPI(3).should.approximately(3.0699801238394655, 1e-9);
     mathTrig.SQRTPI('invalid').should.equal(error.value);
-  });
-
-  test('SUBTOTAL', function() {
-    mathTrig.SUBTOTAL(1, [1, 2, 3]).should.equal(2);
-    mathTrig.SUBTOTAL(2, [1, 2, 3, 'does not count']).should.equal(3);
-    mathTrig.SUBTOTAL(3, [1, 2, 3, 'counts']).should.equal(4);
-    mathTrig.SUBTOTAL(4, [1, 2, 3]).should.equal(3);
-    mathTrig.SUBTOTAL(5, [1, 2, 3]).should.equal(1);
-    mathTrig.SUBTOTAL(6, [1, 2, 3]).should.equal(6);
-    mathTrig.SUBTOTAL(7, [1, 2, 3]).should.equal(1);
-    mathTrig.SUBTOTAL(8, [1, 2, 3]).should.approximately(0.816496580927726, 1e-9);
-    mathTrig.SUBTOTAL(9, [1, 2, 3]).should.equal(6);
-    mathTrig.SUBTOTAL(10, [1, 2, 3]).should.equal(1);
-    mathTrig.SUBTOTAL(11, [1, 2, 3]).should.approximately(0.6666666666666666, 1e-9);
-    mathTrig.SUBTOTAL(101, [1, 2, 3]).should.equal(2);
-    mathTrig.SUBTOTAL(102, [1, 2, 3, 'does not count']).should.equal(3);
-    mathTrig.SUBTOTAL(103, [1, 2, 3, 'counts']).should.equal(4);
-    mathTrig.SUBTOTAL(104, [1, 2, 3]).should.equal(3);
-    mathTrig.SUBTOTAL(105, [1, 2, 3]).should.equal(1);
-    mathTrig.SUBTOTAL(106, [1, 2, 3]).should.equal(6);
-    mathTrig.SUBTOTAL(107, [1, 2, 3]).should.equal(1);
-    mathTrig.SUBTOTAL(108, [1, 2, 3]).should.approximately(0.816496580927726, 1e-9);
-    mathTrig.SUBTOTAL(109, [1, 2, 3]).should.equal(6);
-    mathTrig.SUBTOTAL(110, [1, 2, 3]).should.equal(1);
-    mathTrig.SUBTOTAL(111, [1, 2, 3]).should.approximately(0.6666666666666666, 1e-9);
-    mathTrig.SUBTOTAL('invalid', [1, 2, 3]).should.equal(error.value);
   });
 
   test("SUM", function() {
