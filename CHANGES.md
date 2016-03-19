@@ -1,4 +1,12 @@
 
+2.0.4 / 2016-03-19
+==================
+
+  * update dist
+  * remove jsstat and other unused functions
+  * babelrc
+  * add require and remove unused formulas
+
 2.0.3 / 2016-02-25
 ==================
 
