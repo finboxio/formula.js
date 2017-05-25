@@ -1,4 +1,9 @@
 
+3.0.2 / 2017-05-25
+==================
+
+  * fix not-equal criteria for averageif/sumif formulas
+
 3.0.1 / 2016-03-19
 ==================
 
